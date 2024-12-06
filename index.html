@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>To Do List</title>
+  <link rel="stylesheet" href="./Assets/css/style.css" />
+  <script src="./Assets/script.js" defer></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+</head>
+
+<header>
+<h1>To Do List</h1>
+</header>
+
+<!-- onload function to load data from local storage -->
+<body onload="pageLoad()">
+
+  <div class="centered-container">
+    <button class="button is-link is-large" id="openModal">Add Item</button>
+  </div>
+
+  <!-- Area on page for submitted modal data pulled from local storage-->
+
+  <section id="cardSection" class="section">
+    <div class="container">
+        <div class="columns is-multiline">
+      </div>    
+    </div>
+</section>
+
+  <!-- Modal for Input -->
+
+  <div id="modal" class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-content">
+        <div class="box">
+            <h1 class="title">Add New</h1>
+            <form id="inputForm">
+                <div class="field">
+                    <label class="label" for="userInput">What do you need to do?</label>
+                    <div class="control">
+                        <input class="input" type="text" id="userInput" placeholder="Type something...">
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="control">
+                        <button class="button is-link" type="submit">Submit</button>
+                    </div>
+                </div>
+            </form>
+            <button class="delete" id="closeModal"></button>
+        </div>
+    </div>
+    <div class="modal-close is-large" id="closeModal"></div>
+</div>
+
+  <footer>
+  </footer>
+</body>
+
+</html>
